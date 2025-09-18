@@ -167,7 +167,6 @@ mod VoltaVault {
             
             // Transférer le collatéral sBTC du user vers le vault
             let sbtc_token = IERC20Dispatcher { contract_address: self.sbtc_token.read() };
-            sbtc_token.approve(vault_address, collateral_amount);
             sbtc_token.transfer_from(
                 caller, 
                 vault_address, 
