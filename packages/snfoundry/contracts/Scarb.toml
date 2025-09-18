@@ -9,6 +9,8 @@ edition = "2024_07"
 starknet = ">=2.12.0"
 openzeppelin_access = ">=2.0.0"
 openzeppelin_token = ">=2.0.0"
+# Pragma Oracle (pour le moment, on utilise une interface simplifiée)
+# pragma_lib = { git = "https://github.com/Astraly-Labs/pragma-lib", tag = "v2.0.0" }
 
 [dev-dependencies]
 openzeppelin_utils = ">=2.0.0"
