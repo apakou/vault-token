@@ -1,7 +1,7 @@
 use starknet::ContractAddress;
 
 #[starknet::interface]
-trait IVoltaVault<TContractState> {
+pub trait IVoltaVault<TContractState> {
     fn deposit_and_mint(ref self: TContractState, collateral_amount: u256, mint_amount: u256);
     fn withdraw_and_burn(ref self: TContractState, withdraw_amount: u256, burn_amount: u256);
     fn get_user_collateral(self: @TContractState, user: ContractAddress) -> u256;
