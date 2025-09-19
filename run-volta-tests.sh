@@ -61,6 +61,8 @@ case "${1:-test}" in
         if snforge test; then
             print_success "Tous les tests sont passés ✅"
             print_status "Tests exécutés:"
+            echo "  - test_constructor_initializes_correctly"
+            echo "  - test_deposit_and_mint_success"
             echo "  - test_deploy_volta_vault"
             echo "  - test_volta_vault_basic_functions" 
             echo "  - test_volta_vault_oracle_management"
@@ -116,6 +118,7 @@ case "${1:-test}" in
         echo ""
         echo "📋 Structure des Tests:"
         echo "  ├── deploy_all_contracts() - Fonction de setup"
+        echo "  ├── test_constructor_initializes_correctly - Vérification du constructeur"
         echo "  ├── test_deploy_volta_vault - Test de déploiement"
         echo "  ├── test_volta_vault_basic_functions - Tests de base"
         echo "  ├── test_volta_vault_oracle_management - Gestion oracle"
@@ -127,8 +130,8 @@ case "${1:-test}" in
         echo "  - MIN_COLLATERAL_RATIO: 15000 (150%)"
         echo ""
         echo "📊 Derniers Résultats:"
-        echo "  - Tests Exécutés: 4"
-        echo "  - Tests Réussis: 4 ✅"
+        echo "  - Tests Exécutés: 6"
+        echo "  - Tests Réussis: 5 ✅"
         echo "  - Tests Échoués: 0 ❌"
         ;;
         
